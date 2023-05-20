@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Baslangic {
+    public static void main(String[] args) {
+
+        double kenar1, kenar2, kenar3, alan, u;
+
+        Scanner sonuc = new Scanner(System.in);
+        System.out.println("Lütfen kenar 1 değerini giriniz ");
+        kenar1 = sonuc.nextDouble();
+        System.out.println("Lütfen kenar 2 değerini girinizi ");
+        kenar2 = sonuc.nextDouble();
+        System.out.println("Lütfen kenar 3 değerini girinizi ");
+        kenar3 = sonuc.nextDouble();
+
+        u = ((kenar1 + kenar2 + kenar3) / 2);
+        alan = Math.sqrt(u*(u-kenar1)*(u-kenar2)*(u-kenar3));
+        System.out.println("Alan : " + alan);
+
+
+    }
+}
