@@ -1,0 +1,22 @@
+package Giris;
+
+import java.util.Scanner;
+public class patika {
+    public static void main (String[] args) {
+
+        double km, total, perKm = 2.20 ,openPrice = 10;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen mesafeyi km cinsinden giriniz : ");
+        km = input.nextDouble();
+
+        total = (km * perKm);
+        total += openPrice + total;
+
+        total = (total < 20 ) ? 20 : total;
+        System.out.println("Toplam mesafe tutarı : " + total);
+
+
+
+    }
+}
