@@ -1,0 +1,35 @@
+package Giris;
+
+import java.util.Scanner;
+
+public class patika {
+    public static void main(String[] args) {
+        String username = "patika", password = "patika123", newpassword, choose;
+
+        Scanner inp = new Scanner(System.in);
+
+        System.out.print("Lütfen Kullanıcı adınızı giriniz : ");
+        username = inp.nextLine();
+
+        System.out.print("Lütfen şifrenizi giriniz : ");
+        password = inp.nextLine();
+
+        if (password.equals("patika123")) {
+            System.out.print("Giriş Başarılı");
+        } else {
+            System.out.println("Parolanızı yanlış girdiniz, parolanızı sıfırlamak ister misiniz ? (evet / hayır)");
+            choose = inp.nextLine();
+            switch (choose) {
+                case "evet" :
+                    System.out.print("Lütfen yeni parolanızı giriniz : ");
+                    newpassword = inp.nextLine();
+                    if (newpassword.equals("patika123")){
+                        System.out.print("Şifre oluşturulamadı, lütfen başka şifre giriniz : ");
+                    } else {
+                        System.out.print("Şifreniz değiştirildi.");
+                    }
+            }
+        }
+
+    }
+}
