@@ -1,0 +1,65 @@
+package Giris;
+
+import java.util.Scanner;
+
+public class patika {
+    public static void main(String[] args) {
+
+        double mat, turkce, fizik, kimya, muzik;
+        double ort;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Lütfen matematik notunu giriniz : ");
+        mat = input.nextInt();
+        if (mat > 100 || mat < 0) {
+            System.out.println("Yanlış not girişi yaptınız, ortalamaya dahil edilmeyecektir.");
+            mat = 0;
+        }
+
+        System.out.print("Lütfen turkce notunu giriniz : ");
+        turkce = input.nextInt();
+        if (turkce < 0 || turkce > 100){
+            System.out.println("Yanlış not girdiniz, ortalamaya dahil edilmeyecektir.");
+            turkce = 0;
+        }
+
+        System.out.print("Lütfen fizik notunu giriniz : ");
+        fizik = input.nextInt();
+        if (fizik < 0 || fizik > 100){
+            System.out.println("Yanlış not girdiniz, ortalamaya dahil edilmeyecektir.");
+            fizik = 0;
+        }
+
+        System.out.print("Lütfen kimya notunu giriniz : ");
+        kimya = input.nextInt();
+        if (kimya < 0 || kimya > 100){
+            System.out.println("Yanlış not girdiniz, ortalamaya dahil edilmeyecektir.");
+            kimya = 0;
+        }
+
+        System.out.print("Lütfen muzik notunu giriniz : ");
+        muzik = input.nextInt();
+        if (muzik < 0 || muzik > 100){
+            System.out.println("Yanlış not girdiniz, ortalamaya dahil edilmeyecektir.");
+            muzik = 0;
+        }
+
+        ort = (mat + turkce + fizik + kimya + muzik) / 5;
+        System.out.println("Ortalamanız : " + ort);
+
+
+        if (ort < 55) {
+            System.out.println("Kusura Bakma Sınıfta Kaldın");
+        }
+        else {
+            System.out.println("Tebikler Sınıfı Geçtiniz");
+        }
+
+
+    }
+}
+
+
+
+
