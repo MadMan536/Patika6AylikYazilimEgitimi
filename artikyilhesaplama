@@ -1,0 +1,33 @@
+package Giris;
+import java.util.Scanner;
+public class artikyil {
+
+    public static void main (String [] args) {
+        int yil;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen yıl giriniz : ");
+        yil = input.nextInt();
+        boolean artikyil = false;
+
+        if (yil % 4 == 0) {
+            if (yil % 100 == 0) {
+                if (yil % 400 == 0) {
+                    artikyil = true;
+
+                }
+            } else {
+                artikyil = true;
+            }
+        }
+
+        if (artikyil) {
+            System.out.println(yil + "bir artık yıldır.");
+        } else {
+            System.out.println(yil + " artık bir yıl değildir.");
+        }
+
+     }
+
+    }
+
