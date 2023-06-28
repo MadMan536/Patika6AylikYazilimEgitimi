@@ -1,0 +1,54 @@
+package Giris;
+import java.util.Scanner;
+public class burc {
+    public static void main (String[] args) {
+
+       int age, distance, type;
+       double perKm = 0.10, price;
+
+
+       Scanner input = new Scanner(System.in);
+
+        System.out.print("Lütfen yaşınızı giriniz : ");
+        age = input.nextInt();
+
+        System.out.print("Lütfen gideceğiniz mesafeyi giriniz : ");
+        distance = input.nextInt();
+
+        System.out.print("Lütfen yolculuk tipini giriniz   1 = Tek Yön - 2 = Gidiş-Dönüş : ");
+        type = input.nextInt();
+
+        if (type == 2) {
+            perKm = 0.08;
+            System.out.println("Yolculuk tipini Gidiş-Dönüş seçtiğiniz için %20 indirim uygulanmıştır.");
+        }
+
+        else if  (type != 1 || type != 2) {
+            System.out.println("Yanlış giriş yaptınız !");
+            System.exit(0);
+
+        }
+
+        if (distance < 0 || age < 0) {
+            System.out.println("Yanlış giriş yaptınız");
+        }
+        if (age < 12) {
+            perKm = 0.05;
+            System.out.println("Yaşınız 12'den küçük olduğu için %50 indirim uygulanmıştır ");
+        }
+
+        else if (age >=12 && age <=24 ) {
+            perKm = 0.09;
+            System.out.println("Yaşınız 12 - 24 arasında olduğu için %10 indirim uygulanmıştır");
+        }
+
+        else if (age > 65) {
+            perKm = 0.07;
+            System.out.println("Yaşınız 65'den büyük olduğu için %30 indirim uygulanmıştır ");
+        }
+
+        price = distance * perKm;
+        System.out.println("Yolculuk maliyetiniz : " + price +  " TL ");
+
+    }
+}
