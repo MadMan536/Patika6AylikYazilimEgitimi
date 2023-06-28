@@ -1,0 +1,23 @@
+package Giris;
+import java.util.Scanner;
+
+public class zodyak {
+    public static void main(String [] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Doğum yılınızı girin: ");
+        int birthday = scanner.nextInt();
+
+        String[] zodyak = {
+                "Maymun", "Horoz", "Köpek", "Domuz", "Fare", "Öküz",
+                "Kaplan", "Tavşan", "Ejderha", "Yılan", "At", "Koyun"
+        };
+
+        int indeks = (birthday  - 1900) % 12;
+
+        System.out.println("Çin Zodyağı Burcunuz: " + zodyak[indeks]);
+
+
+    }
+}
