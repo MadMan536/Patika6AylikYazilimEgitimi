@@ -1,0 +1,29 @@
+package Giris;
+import java.util.Scanner;
+public class teksayi {
+    public static void main (String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int toplam = 0;
+
+        while (true) {
+            System.out.print("Bir sayı girin (Programı sonlandırmak için 0 girin): ");
+            int sayi = input.nextInt();
+
+            if (sayi == 0) {
+                break;
+            }
+
+            if (sayi % 2 == 0 && sayi % 4 == 0) {
+                toplam += sayi;
+            }
+        }
+
+        System.out.println("Girilen çift ve 4'ün katı olan sayıların toplamı: " + toplam);
+
+
+
+
+
+    }
+}
